@@ -1,0 +1,5 @@
+# 02_train_and_save_forecasts.py
+
+from src.models.train_forecasting_models import train_evaluate_and_save_predictions
+
+train_evaluate_and_save_predictions()
