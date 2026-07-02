@@ -21,3 +21,27 @@ Housing demand growth, price growth, employment growth, inventory, construction 
 - sql: KPI SQL examples
 - powerbi: dashboard guide and DAX measures
 - docs: architecture, KPI framework, interview guide
+
+## Model Training
+
+Run:
+
+```bash
+python src/models/train_forecasting_models.py
+```
+
+This creates:
+
+```text
+data/curated/fact_market_forecast_predictions.csv
+data/curated/model_evaluation_metrics.csv
+```
+
+The modeling workflow includes:
+
+- baseline previous-month model
+- XGBoost-style gradient boosting model
+- DeepAR-style probabilistic forecast approximation
+- weighted ensemble forecast
+- MAE, RMSE, MAPE, directional accuracy
+- prediction interval coverage
